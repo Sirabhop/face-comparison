@@ -9,7 +9,7 @@ base_face_id = st.text_input("Place Your Rider ID")
 if base_face_id:
     uploaded_face = st.file_uploader("Upload Your Face", type=['jpg','png','jpeg'], accept_multiple_files=False)
     # base_face = frc.load_image_file(f'/Users/sirabhopsaengumyoun/Desktop/My Project/face_comparision/face_database/{str(base_face_id)}.jpg')
-    base_face = frc.load_image_file(f'/face_database/{str(base_face_id)}.jpg')
+    base_face = frc.load_image_file(f'face_database/{str(base_face_id)}.jpg')
 
     encoded_base_face = frc.face_encodings(base_face)
     if uploaded_face:
