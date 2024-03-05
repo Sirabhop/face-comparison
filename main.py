@@ -17,7 +17,7 @@ if base_face_id:
         encoded_comparing_face = frc.face_encodings(face)
         distance = frc.face_distance(encoded_comparing_face, encoded_base_face[0])
 
-        if distance != []:
+        if distance.size > 0:
 
             accuracy = 1 - distance[0]
 
