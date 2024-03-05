@@ -1,2 +1,0 @@
-streamlit
-face-recognition
