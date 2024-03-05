@@ -16,9 +16,12 @@ if base_face:
         st.image(uploaded_face)
         # base_face = frc.load_image_file(f'/Users/sirabhopsaengumyoun/Desktop/My Project/face_comparision/face_database/{str(base_face_id)}.jpg')
         # base_face = frc.load_image_file(f'face_database/{str(base_face_id)}.jpg')
+
+        # Encode image
+        base_face = frc.load_image_file(base_face)
         encoded_base_face = frc.face_encodings(base_face)
-        face = frc.load_image_file(uploaded_face)
-        encoded_comparing_face = frc.face_encodings(face)
+        uploaded_face = frc.load_image_file(uploaded_face)
+        encoded_comparing_face = frc.face_encodings(uploaded_face)
         
         distance = frc.face_distance(encoded_comparing_face, encoded_base_face[0])
 
