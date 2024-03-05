@@ -6,8 +6,8 @@ st.write('For riders facial verification')
 cut_off = st.slider('Cut-Off Confidence', min_value=0.0, max_value=1.0, value=0.8)
 
 base_face = st.file_uploader("Your based face", type=['jpg','png','jpeg'], accept_multiple_files=False)
-st.image(base_face)
 if base_face:
+    st.image(base_face)
     uploaded_face = st.file_uploader("Upload Your Face", type=['jpg','png','jpeg'], accept_multiple_files=False)
     if uploaded_face:
         st.image(base_face)
